@@ -15,14 +15,15 @@
 .category {
 background-color: #351B1A;
 width: 100%;
-line-height: 19px;
 padding: 12px;
 color:#957A7C;
 ;
 }
-.category p {
+.category h1 {
   font-size: 16px;
 font-weight: 500;
+line-height: 19px;
+
 }
 .container {
   width: 900px;
@@ -38,8 +39,21 @@ font-weight: 500;
 }
 .food{
   width: 100%;
+  margin-top: 20px;
 }
 .food-header {
 display: flex;
 justify-content: space-between;
+font-size: 16px;
+font-weight: 700;
+}
+.food-header h6 {
+  font-size: 16px;
+font-weight: 700;
+}
+.recipe {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19px;
+  margin-top: 8px;
 }

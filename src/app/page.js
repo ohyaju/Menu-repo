@@ -87,39 +87,54 @@ const menu = [
 ]
 
 function CardContainer(props) {
+  console.log(props.menus.foods[0].name);
+
+
   return (
     <div>
       <div className="card-container">
         <div className="category">
-          <p>{props.categoryName}</p>
+          <h1>{props.menus.type}</h1>
         </div>
-        <div className="food">{}
+        <div className="food">
           <div className="food-header">
-            {/* <h6>{props.menu.name}</h6>
-            <p>{props.menu.price}</p> */}
+            <h6>{props.menus.foods[0].name}</h6>
+
+            <p>{props.menus.foods[0].price}</p>
           </div>
-          {/* <p>{props.menu.ingredient}</p> */}
+          <p className="recipe">{props.menus.foods[0].ingredient}</p>
+        </div>
+        <div className="food">
+          <div className="food-header">
+            <h6>{props.menus.foods[1].name}</h6>
+
+            <p>{props.menus.foods[1].price}</p>
+          </div>
+          <p className="recipe">{props.menus.foods[1].ingredient}</p>
+        </div>
+        <div className="food">
+          <div className="food-header">
+            <h6>{props.menus.foods[2].name}</h6>
+
+            <p>{props.menus.foods[2].price}</p>
+          </div>
+          <p className="recipe">{props.menus.foods[2].ingredient}</p>
         </div>
       </div>
     </div>
   )
 }
 export default function Home() {
+  const Cards = [];
+  for (let i = 0; i < menu.length; i++) {
+    Cards.push(<CardContainer menus={menu[i]}></CardContainer>)
+  }
   return (
     <div>
       <h1 className="head">pranzo</h1>
       <div className="container">
-        <CardContainer categoryName="SALAD" />
-        <CardContainer categoryName="PASTA" />
-        <CardContainer categoryName="PIZZA" />
-        <CardContainer categoryName="SALAD" />
-
+      {Cards}
       </div>
     </div>
   );
 }
-// const cards = [];
-// for (let i = 0; i < menu.length; i++) {
-//   cards.push(<Card user={users[i]}></Card>)
-// }
-// return ()
