@@ -1,42 +1,45 @@
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
-}
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
 }
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-a {
-  color: inherit;
-  text-decoration: none;
+.head {
+  line-height: 185px;
+  font-family: "Jost", serif;
+  font-size: 128px;
+  font-weight: 900;
+  text-align: center;
+}
+.category {
+background-color: #351B1A;
+width: 100%;
+line-height: 19px;
+padding: 12px;
+color:#957A7C;
+;
+}
+.category p {
+  font-size: 16px;
+font-weight: 500;
+}
+.container {
+  width: 900px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-self: center;
+  gap: 20px;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+.card-container{
+  width: 440px;
+
+}
+.food{
+  width: 100%;
+}
+.food-header {
+display: flex;
+justify-content: space-between;
 }
